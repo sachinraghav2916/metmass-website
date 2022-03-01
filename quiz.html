@@ -1,0 +1,412 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <!-- font awesome -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <!--Import Google Icon Font-->
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link href="styles/quizstyle.css" rel="stylesheet">
+    <title>METMASS MNIT JAIPUR</title>
+</head>
+
+<body class="">
+
+    <!-- navbar -->
+    <header>
+        <!--      <div class="navbar-fixed">-->
+       <div class="navbar-fixed">
+            <nav class="white nav-extended" id="Navbar">
+                <div class="nav-wrapper">
+                    <div class="container white" id="Navbar">
+                        <a href="#" class="brand-logo"><img src="photos/image2vector.svg" id="metmassLogo"></a>
+                        
+                        <a href="#" class="sidenav-trigger" data-target="mobile-menu">
+                            <i class="material-icons black-text ">menu</i>
+                        </a>
+                        
+                        <ul class="right hide-on-med-and-down">
+                            <li style="display:none;" class=" loggedInOut"><a href="index.html" class="black-text text-darken-4 "><span class="ss white-text">Home</span></a></li>
+                            <li style="display:none;" class=" loggedInOut"><a href="team.html" class="black-text text-darken-4">Team</a></li>
+                            <li class=" loggedIn" style="display:none"><a href="#" id="logout1" class="black-text text-darken-4">Logout</a></li>
+                            <li class=" loggedOut" style="display:none"><a href="#modal-signUp" class="black-text text-darken-4 modal-trigger" data-target="modal-signUp">SignUp</a></li>
+                            <li style="display:none;" class=" loggedInOut"><a href="#contact" class="black-text text-darken-4">AboutUs</a></li>
+                            <li><a href="https://www.instagram.com/metmassmnitjaipur/" class="tooltipped btn-floating btn-small black darken-4" data-position="bottom" data-tooltip="Instagram">
+                                    <i class="fab fa-instagram"></i>
+                                </a></li>
+                            <li><a href="#" class="tooltipped btn-floating btn-small black darken-4" data-position="bottom" data-tooltip="Facebook">
+                                    <i class="fab fa-facebook"></i>
+                                </a></li>
+                            <li><a href="#" class="tooltipped btn-floating btn-small  black darken-4" data-position="bottom" data-tooltip="Twitter">
+                                    <i class="fab fa-twitter"></i>
+                                </a></li>
+                        </ul>
+                        <br>
+
+
+
+
+                    </div>
+                </div>
+            </nav>
+        </div>
+        <!--      </div>-->
+    </header>
+
+
+
+
+
+ <div class="fixed-action-btn horizontal click-to-toggle bottomMenu">
+    <a class="btn-floating btn white ">
+      <i class="material-icons black-text">menu</i>
+    </a>
+    <ul class="">
+      <li class=""> <div class="IconDiv ActiveTab bottom-menu z-depth-4">
+            <span class="homeIcon Icons"><i class="material-icons">home</i></span><br>
+            <span class="home">Home</span>
+        </div></li>
+      <li class=""> <div class="IconDiv  bottom-menu z-depth-4"> <span class="teamIcon Icons"><i class="material-icons">group</i></span><br>
+            <span class="team">Team</span>
+        </div></li>
+      <li class="loggedIn"> <div class="IconDiv  bottom-menu z-depth-4" onclick="logout2(event)">
+            <span class="logoutIcon Icons"><i class="material-icons">person_outline</i></span><br>
+            <span class="logout  ">logout</span>
+        </div></li>
+      <li class="loggedOut"><div class="IconDiv bottom-menu z-depth-4">
+            <a href="#modal-signUp" class="modal-trigger black-text" data-target="modal-signUp"><span class="loginIcon Icons"><i class="material-icons">group_add</i></span><br>
+                <span class="login">login</span></a>
+        </div></li>
+        
+        <li class="">
+             <div class="IconDiv bottom-menu z-depth-4"> <span class="aboutusIcon Icons"><i class="material-icons">laptop_windows</i></span><br>
+            <span class="aboutus">aboutus</span>
+        </div>
+        </li>
+    </ul>
+  </div>
+  
+  
+  <!--        signup modal-->
+
+    <div id="modal-signUp" class=" modal">
+
+        <div class="modal-content center">
+           <h4>SignUp</h4>
+            <div class="emailSignup">
+                <form id="signup-form">
+                    <div class="input-field">
+                        <input type="email" id="sign-up-email">
+                        <label for="sign-up-email">Enter your email here...</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="sign-up-password">
+                        <label for="sign-up-password">write your password here...</label>
+                    </div><br>
+                    <button class="btn small waves-effect">submit</button>
+                </form>
+            </div>
+            <hr>
+
+           
+           
+            <!--            sign in form-->
+            <div class="email-signIn">
+               <h4>SignIn</h4>
+                <form id="signin-form">
+                    <div class="input-field">
+                        <input type="email" id="sign-in-email">
+                        <label for="sign-in-email">write email here..</label>
+                    </div>
+                    <div class="input-field">
+                        <input type="password" id="sign-in-password">
+                        <label for="sign-in-password">write password here..</label>
+                    </div><br>
+                    <button class="btn small waves-effect">submit</button><br>
+                </form>
+            </div>
+            <hr>
+            <h4 class="cardTitle" style="color: #ffa100;">SignUp</h4><br>
+            <a class="btn-text btn blue" id="SignInButton" onclick="SignIn(event)"><i class="material-icons">person_outline</i>Sign in with google</a>
+        </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="moreTabsSmallContainer center">
+        <div class="moreTabsSmall col s12  container" style="display: ">
+            <span class="eventsButton  white "><a href="index.html" class="black-text">Events</a></span>
+            <span class="quizButton green"><a href="quiz.html" class="white-text">Quiz</a></span>
+            <span class="articlesButton white"><a href="article.html" class="black-text">Articles</a></span>
+        </div>
+    </div>
+
+
+    <!-- Main links attached to the page-->
+    <div class="container ">
+        <div class="row mainTabs">
+            <div class="col  s12  " id="homeTabs">
+                <div class="container">
+                    <ul class="tabs mainTabs">
+                        <li class="tab col grey darken-3 " id="all-events"><a href="#allEvents" class="white-text active">All-Quiz</a></li>
+                        <li class="tab col "><a class="white-text text-darken-4" href="#ongoingEvents">Ongoing-Quiz</a></li>
+                        <li class="tab col "><a class="white-text text-darken-4" href="#upcomingEvents">Upcoming-Quiz</a></li>
+                        <li class="tab col  "><a href="#historyEvents" class="white-text text-darken-4 ">Previous-Quiz</a></li>
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container full-width" >
+        <div class="row">
+           
+            <div class="moreTabs col s12 m6 l3 right ">
+                <div class="container center">
+                    <ul>
+                        <li><span class="eventsButton  "><a href="index.html" class="black-text">Events</a></span><br><br> </li>
+                        <li> <span class="quizButton green"><a href="quiz.html" class="white-text">Quiz</a></span><br><br></li>
+                        <li><span class="articlesButton"><a href="article.html" class="black-text">Articles</a></span> </li>
+                    </ul>
+                </div>
+
+            </div>
+
+            <div class="col s12 l8 m8">
+                
+                
+                <section id="quiz-container">
+                    <div class="allQuizes"></div>
+                </section>    
+                
+            </div>
+        </div>
+    </div>
+
+<div class="container center" id="events-preloader">
+                     <div class="preloader-wrapper big active" style="margin-top: 100px;">
+                         <div class="spinner-layer spinner-blue-only">
+                             <div class="circle-clipper left">
+                                 <div class="circle"></div>
+                             </div>
+                             <div class="gap-patch">
+                                 <div class="circle"></div>
+                             </div>
+                             <div class="circle-clipper right">
+                                 <div class="circle"></div>
+                             </div>
+                         </div>
+                     </div>
+     </div>
+
+
+
+
+
+
+
+
+    <div class="container">
+
+        <div class="row" id="allEvents">
+            <div class="row">
+                <div id="All-Events"></div> <!-- iNSERTION OF ALL EVENTS SECTION FROMM THE DATABASE-->
+            </div>
+        </div>
+
+
+
+        <div class="row" id="ongoingEvents">
+            <div class="row">
+                <div id="Ongoing-Events"></div> <!-- Insertion of the ongoing events from the database -->
+            </div>
+            <a class=" modal-trigger  btn-floating btn-small waves-effect waves-light green right" data-target="modal-addEvent" id="addEventButton" style="display: none" onclick="eventCategeory(event)"><i class="material-icons">add</i></a>
+        </div>
+
+        <div class="row" id="upcomingEvents">
+            <div class="row">
+                <div id="Upcoming-Events"></div>
+                <!--Insertion of the upcoming events from the database -->
+            </div>
+
+
+
+            <a class=" modal-trigger  btn-floating btn-small waves-effect waves-light green right" data-target="modal-addEvent" id="addEventButton" style="display: none"><i class="material-icons" onclick="eventCategeory(event)">add</i></a>
+        </div>
+
+        <div class="row" id="historyEvents">
+            <div class="row">
+                <div id="History-Events"></div>
+                <!--Insertion of the history events  from the database -->
+            </div>
+
+            <a class=" modal-trigger  btn-floating btn-small waves-effect waves-light green right" data-target="modal-addEvent" id="addEventButton" style="display: none"><i class="material-icons" onclick="eventCategeory(event)">add</i></a>
+        </div>
+
+
+
+
+
+
+
+
+
+        <!--         Metmass quiz notifiacation section for open source notice-->
+
+        <div class="row center" id="metmassQuiz-section" style="display: none;">
+            <div class="openSource grey darken-4 white-text" id="open-source">
+                <span class="Title">Open Source</span>
+                <span class="close right"><a href="#" class="white-text"><i class="material-icons" onclick="closeOpenSource(event)">cancel</i></a></span><br>
+                <span class="openSourceMessage">
+                    Quiz Portal is open source. Be part of the community or help us to improve this portal with best of the features.
+                    If you want to make it better, your help is very welcome!!</span><br>
+                <!--                <span class="name">Sachin Reghav (sraghav872@gamil.com)</span>-->
+                <span class="gitButton"><a href="#" class="btn small grey lighten-1">Github files</a></span>
+            </div>
+
+            <div id="quizShowing-section">
+            </div>
+<!--
+            <div class="addQuizButton">
+                <a class="btn-floating right waves light wave-effect yellow darken-4 modal-trigger" href="#addQuiz" id="addQuizButton" style="display: none;"><i class="material-icons">add</i></a>
+            </div>
+-->
+        </div>
+
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!--      Adding a new quiz with the admin access-->
+
+    <div class="container center " >
+         <a class="btn-small waves-light blue white-text center adminButton" id="addQuizButton" href="#" style="display: none;">add quiz</a>
+         
+        <div class="row">
+           <div class="col s12 l8 m8 white" id="addQuiz" style="display: none;">
+           <span class="right hideQuizFormButton" id="hideQuizFormButton"><i class="material-icons">cancel</i></span>
+            <h5>Add new Quiz</h5>
+            <form id="quiz-form" class="">
+                <div class="input-field">
+                    <input type="number" id="quiz-number" required>
+                    <label for="quiz-number">Enter the quiz number</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="quiz-name" required>
+                    <label for="quiz-name">Enter Quiz name</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="quiz-date" required>
+                    <label for="quiz-date">Enter Quiz date</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="quiz-duration" required>
+                    <label for="quiz-duration">Enter quiz Duration</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="quiz-questions" required>
+                    <label for="quiz-questions">Enter number of questions</label>
+                </div>
+                <div class="input-field">
+                    <textarea class="materialize-textarea" id="quiz-syllabus" required></textarea>
+                    <label for="quiz-syllabus">Enter the quiz syllabus</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="quiz-type" required>
+                    <label for="quiz-type">Write quiz type here...</label>
+                </div>
+                <div class="input-field">
+                    <input type="number" id="quiz-registrations" required>
+                    <label for="quiz-registrations">Enter number of quiz registrations</label>
+                </div>
+                <div class="input-field">
+                    <input type="text" id="quiz-organiser" required>
+                    <label for="quiz-organiser">write quiz organiser here...</label>
+                </div>
+                <button class="btn right blue">submit</button><br>
+            </form>
+        </div>
+    </div></div>
+
+
+
+
+
+
+
+
+
+
+
+    <!--     firebase web page apis for the backend services-->
+
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-firestore.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-storage.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.6.0/firebase-database.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBqcAnKAL5_cKkj7znZpLOlLGy8G1FVL4w",
+            authDomain: "metmass-554ad.firebaseapp.com",
+            databaseURL: "https://metmass-554ad-default-rtdb.firebaseio.com",
+            projectId: "metmass-554ad",
+            storageBucket: "metmass-554ad.appspot.com",
+            messagingSenderId: "862327534046",
+            appId: "1:862327534046:web:5eb4afa2ebe32c6a4fad4f"
+        };
+        firebase.initializeApp(config);
+
+        // make auth and firestore references
+        const auth = firebase.auth();
+        const db = firebase.firestore();
+        var storageRef = firebase.storage().ref();
+
+        // update firestore settings
+        db.settings({
+            timestampsInSnapshots: true
+        });
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+
+
+    <script>
+        $(document).ready(function() {
+
+          
+            $('.materialboxed').materialbox();
+            $('.parallax').parallax();
+            $('.tabs').tabs();
+           
+            $('.tooltipped').tooltip();
+            $('.scrollspy').scrollSpy();
+
+        });
+    </script>
+    <script src="scripts/quizindex.js"></script>
+</body></html>
